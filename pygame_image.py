@@ -21,7 +21,7 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
+        x = tmr%3200
         key_lst = pg.key.get_pressed()
 
         if key_lst[pg.K_UP]:
@@ -29,11 +29,11 @@ def main():
         if key_lst[pg.K_DOWN]:
             move_y += 1
         if key_lst[pg.K_LEFT]:
-            move_x -= 1
+            move_x -= 2
         if key_lst[pg.K_RIGHT]:
             move_x += 2
 
-        x = tmr%3200
+        
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600, 0])
         screen.blit(bg_img, [-x+3200, 0])
