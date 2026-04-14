@@ -32,7 +32,7 @@ def main():
             move_x -= 2
         if key_lst[pg.K_RIGHT]:
             move_x += 2
-
+        kk_rct.move_ip((move_x,move_y))
         
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600, 0])
@@ -40,6 +40,8 @@ def main():
         screen.blit(kk_img, kk_rct)
         pg.display.update()
         tmr += 1        
+        move_x=-1
+        move_y=0
         clock.tick(200)
 
 
